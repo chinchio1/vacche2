@@ -30,43 +30,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     exit;
 }
 ?>
-<!DOCTYPE html>
-<html lang="it">
-<head>
-  <meta charset="UTF-8">
-  <title>Risultati calcolo</title>
-</head>
-<body>
-    <h2>Inserimento dati</h2>
-  <form action="calcola.php" method="post">
-    <label for="a">Valore A:</label>
-    <input type="number" name="a" id="a" step="any" required><br><br>
-
-    <label for="b">Valore B:</label>
-    <input type="number" name="b" id="b" step="any" required><br><br>
-
-    <label for="c">Valore C:</label>
-    <input type="number" name="c" id="c" step="any" required><br><br>
-
-    <input type="submit" value="Calcola">
-  </form>
-  <h2>Risultati</h2>
-
-  <p>Valore A = <?php echo htmlspecialchars($a); ?></p>
-  <p>Valore B = <?php echo htmlspecialchars($b); ?></p>
-  <p>Valore C = <?php echo htmlspecialchars($c); ?></p>
-
-  <hr>
-
-  <p>Somma (A + B + C) = <?php echo $somma; ?></p>
-  <p>Prodotto (A × B × C) = <?php echo $prodotto; ?></p>
-
-  <?php if ($formula !== null): ?>
-    <p>Formula (A + B) / C = <?php echo $formula; ?></p>
-  <?php else: ?>
-    <p>Formula (A + B) / C non calcolabile (C = 0)</p>
-  <?php endif; ?>
 
   <p><a href="index.html">Torna indietro</a></p>
 </body>
 </html>
+
