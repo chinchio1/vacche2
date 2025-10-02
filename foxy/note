@@ -1,0 +1,63 @@
+# 📊 Progetto PHP - Inserimento Dati Manuale o da Excel
+
+Questo progetto PHP consente all'utente di:
+
+- Inserire dati **manualmente** tramite un form
+- Caricare un file **Excel** (upload simulato per ora)
+- Visualizzare una **preview con calcoli**
+- Confermare i dati (in futuro saranno salvati nel database)
+
+---
+
+## 🖥️ Hosting e Database
+
+- Hosting: Aruba
+- Database: MySQL (fornito da Aruba)
+- Spazio disponibile: 20 GB (espandibile)
+- Il progetto è compatibile con hosting **Linux + PHP + MySQL** di Aruba
+
+---
+
+## 🗂️ Struttura del progetto
+
+php-project/
+│
+├── src/
+│ └── db.php # Connessione al database (da configurare)
+│
+├── public/
+│ ├── index.php # Pagina iniziale: scelta tra form o Excel
+│ ├── insert.php # Inserimento manuale
+│ ├── upload_excel.php # Upload file Excel (simulato)
+│ ├── preview.php # Mostra anteprima + calcoli
+│ ├── save.php # Conferma (e in futuro salvataggio)
+│ ├── style.css # Stile base
+│ └── script.js # JS opzionale
+
+yaml
+Copia codice
+
+---
+
+## ⚙️ Requisiti
+
+- PHP 7.4 o superiore (supportato da Aruba)
+- MySQL/MariaDB (già incluso in hosting Aruba)
+- Estensione PHP `PDO` abilitata
+- Estensione `file_uploads` attiva
+- (Futuro) Libreria PhpSpreadsheet per leggere file Excel reali
+
+---
+
+## 🚀 Installazione
+
+1. **Carica i file sul server Aruba** via FTP:
+   - Carica l’intero progetto (es. nella cartella `www/`)
+   - Imposta `public/` come root visibile del sito
+
+2. **Configura il file di connessione** `src/db.php`:
+   ```php
+   $host = 'sqlXXXX.aruba.it';     // Fornito da Aruba
+   $dbname = 'nome_database';
+   $user = 'nome_utente';
+   $password = 'password';
